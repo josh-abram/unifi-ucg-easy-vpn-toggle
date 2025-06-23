@@ -7,6 +7,9 @@ VPN_NAME=""  # Leave empty to use the first VPN found, or specify a name like "E
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_SCRIPT="$SCRIPT_DIR/unifi_vpn_manager.py"
 
+# Change to script directory to ensure config file is found
+cd "$SCRIPT_DIR"
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -50,6 +53,8 @@ fi
 # Check if command was successful
 if [ $? -ne 0 ]; then
     print_error "Failed to get VPN status. Check your configuration and network connection."
+    print_error "Working directory: $(pwd)"
+    print_error "Config file exists: $([ -f unifi_config.json ] && echo 'Yes' || echo 'No')"
     exit 1
 fi
 
@@ -116,4 +121,7 @@ else
     exit 1
 fi
 
-print_status "VPN toggle operation completed successfully!" 
+print_status "VPN toggle operation completed successfully!"
+
+# Keep terminal open for a moment to see the result
+sleep 2 

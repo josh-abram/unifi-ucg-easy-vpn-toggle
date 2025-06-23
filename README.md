@@ -89,13 +89,6 @@ Enable verbose logging by setting `"debug": true` in your config file:
 **Debug Off** (default): Only errors logged to file, silent operation
 **Debug On**: Detailed logging to console and file for troubleshooting
 
-## Troubleshooting
-
-**SSL Errors**: Normal with self-signed certificates - automatically handled
-**Authentication Failed**: Verify URL, username, password, and admin privileges  
-**VPN Not Found**: Use `--action status` to list available VPN clients
-**Connection Issues**: Check firewall and network connectivity
-
 ## Automation Examples
 
 ### Scheduled VPN Control (Linux/macOS)
