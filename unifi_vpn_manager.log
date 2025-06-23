@@ -1,0 +1,7 @@
+2025-06-23 11:36:18,600 - INFO - Attempting to login to UniFi Controller...
+2025-06-23 11:36:19,184 - INFO - Successfully authenticated with UniFi Controller
+2025-06-23 11:36:19,184 - INFO - CSRF token obtained
+2025-06-23 11:36:19,238 - INFO - Found 4 network configurations
+2025-06-23 11:36:19,238 - INFO - Found VPN client: Surfshark (purpose: vpn-client)
+2025-06-23 11:36:19,239 - INFO - Found 1 VPN client configurations
+2025-06-23 11:36:19,252 - INFO - Logged out from UniFi Controller
