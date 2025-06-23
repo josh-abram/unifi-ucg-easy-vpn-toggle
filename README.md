@@ -1,6 +1,5 @@
 # UniFi UCG Ultra VPN Client Manager
-
-**Cross-Platform VPN Control Made Easy** - Quickly enable or disable VPN client profiles on your UCG Ultra router from both **Windows** and **Linux/MacOS** with simple batch/shell scripts.
+Quickly enable or disable VPN client profiles on your UCG Ultra router from both **Windows** and **Linux/MacOS** with simple batch/shell scripts.
 *Example: Running the Windows batch script to toggle VPN status*
 ![Example Usage](example.png)
 
