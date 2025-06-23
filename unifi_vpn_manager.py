@@ -75,16 +75,17 @@ class UniFiVPNManager:
                 logging.StreamHandler(sys.stdout),
                 logging.FileHandler('unifi_vpn_manager.log')
             ]
+            
+            logging.basicConfig(
+                level=log_level,
+                format='%(asctime)s - %(levelname)s - %(message)s',
+                handlers=handlers,
+                force=True  # Override any existing configuration
+            )
         else:
-            log_level = logging.ERROR
-            handlers = [logging.FileHandler('unifi_vpn_manager.log')]
-        
-        logging.basicConfig(
-            level=log_level,
-            format='%(asctime)s - %(levelname)s - %(message)s',
-            handlers=handlers,
-            force=True  # Override any existing configuration
-        )
+            # No logging in normal operation
+            logging.basicConfig(level=logging.CRITICAL, handlers=[])
+            
         self.logger = logging.getLogger(__name__)
     
     def login(self) -> bool:

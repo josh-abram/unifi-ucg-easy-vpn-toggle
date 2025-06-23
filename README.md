@@ -98,6 +98,11 @@ Enable verbose logging by setting `"debug": true` in your config file:
 0 6 * * * python3 /path/to/unifi_vpn_manager.py --action resume   # 6 AM resume
 ```
 
+### Keyboard Shortcut Example
+Quick VPN toggle bound to keyboard shortcut for instant control:
+
+![Keyboard Shortcut Demo](example.gif)
+
 ## Security
 
 Protect your config file:
@@ -107,4 +112,4 @@ chmod 600 unifi_config.json  # Linux/macOS
 
 ## License
 
-MIT License 
+MIT License
